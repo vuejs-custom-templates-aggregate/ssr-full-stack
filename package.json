@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "cross-env": "^5.0.1",
-    "koa": "^2.4.1",
+    "express": "^4.15.3",
     "nuxt": "latest",
     "source-map-support": "^0.4.15"
   },
