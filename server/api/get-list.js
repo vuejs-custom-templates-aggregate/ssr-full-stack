@@ -1,6 +1,6 @@
 /**
  * @file 列表示例接口
- * @author 小强赵
+ * @author zxq
  */
 
 export default (req, res, next) => {
@@ -14,5 +14,4 @@ export default (req, res, next) => {
             name: 'bbb'
         }]
     });
-    next();
 };

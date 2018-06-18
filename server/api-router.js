@@ -3,11 +3,13 @@
  * @author 小强赵
  */
 
-import express from 'express';
+import {Router} from 'express';
 import getList from './api/get-list';
+import upload from './api/upload';
 
-const router = express.Router();
+const router = new Router();
 
 router.get('/get-list', getList);
+router.post('/upload', upload);
 
 export default router;
