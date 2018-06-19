@@ -1,6 +1,16 @@
 <template>
     <footer>
-        Visit our website for more documentation : 
-        <a href="https://nuxtjs.org" target="_blank">nuxtjs.org</a>
+        copy right
     </footer>
 </template>
+<style scoped>
+body {
+    position: relative;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+</style>

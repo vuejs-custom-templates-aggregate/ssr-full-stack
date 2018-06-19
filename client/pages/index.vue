@@ -5,8 +5,8 @@
 </template>
 
 <style scoped>
-.title
-{
-    margin: 50px 0;
+.container {
+    text-align: center;
+    line-height: 20em;
 }
 </style>
