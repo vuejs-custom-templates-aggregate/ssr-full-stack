@@ -4,12 +4,12 @@
  */
 
 import {Router} from 'express';
-import getList from './api/get-list';
+import user from './api/user';
 import upload from './api/upload';
 
 const router = new Router();
 
-router.get('/get-list', getList);
+router.get('/source', user.getUserList);
 router.post('/upload', upload);
 
 export default router;
