@@ -8,6 +8,7 @@
     "start": "cross-env NODE_ENV=production node build/main.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cross-env": "^5.0.1",
     "element-ui": "^2.4.1",
     "express": "^4.15.3",
