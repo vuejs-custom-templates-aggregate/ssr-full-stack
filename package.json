@@ -1,7 +1,7 @@
 {
-  "name": "joint-debugging-platform",
+  "name": "ssr-full-stack",
   "version": "0.0.1",
-  "description": "前后端联调平台",
+  "description": "全栈项目模板",
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
@@ -22,8 +22,8 @@
     "babel-eslint": "^7.1.1",
     "backpack-core": "^0.3.0",
     "eslint": "^3.13.1",
-    "eslint-loader": "^1.9.0",
     "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^2.0.3",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
@@ -32,5 +32,5 @@
     "nodemon": "^1.11.0",
     "scmp": "^2.0.0"
   },
-  "author": "zhaoxiaoqiang"
+  "author": "xiaoqiangzhao"
 }

@@ -10,7 +10,7 @@
 2. 启动 MongoDB 和 Redis
 3. `npm install` 安装依赖包
 4. `npm run dev`
-5. visit `http://localhost:4000`
+5. visit `http://localhost:9090`
 6. done!
 
 MongoDB 数据库名 test。

@@ -14,7 +14,7 @@ import config from '../nuxt.config.js';
 
 const app = express();
 const host = process.env.HOST || '127.0.0.1';
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 9090;
 
 app.set('port', port);
 

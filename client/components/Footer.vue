@@ -1,12 +1,9 @@
 <template>
     <footer>
-        copy right
+        Copy Right
     </footer>
 </template>
 <style scoped>
-body {
-    position: relative;
-}
 footer {
     position: absolute;
     bottom: 0;

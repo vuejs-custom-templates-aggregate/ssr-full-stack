@@ -9,7 +9,7 @@ import upload from './api/upload';
 
 const router = new Router();
 
-router.get('/source', user.getUserList);
+router.get('/users', user.getUserList);
 router.post('/upload', upload);
 
 export default router;

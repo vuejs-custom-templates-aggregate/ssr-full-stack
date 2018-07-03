@@ -9,7 +9,7 @@ import bluebird from 'bluebird';
 import user from './user';
 
 mongoose.Promise = bluebird;
-const db = 'mongodb://127.0.0.1/test';
+const db = 'mongodb://127.0.0.1:27017/test';
 
 mongoose.connect(db).then(() => {
     console.log('数据库链接成功');
