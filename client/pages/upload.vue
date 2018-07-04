@@ -13,8 +13,8 @@
 </template>
 <script>
 import elUpload from 'element-ui/lib/upload';
-import 'element-ui/lib/theme-default/upload.css';
-import 'element-ui/lib/theme-default/icon.css';
+import 'element-ui/lib/theme-chalk/upload.css';
+import 'element-ui/lib/theme-chalk/icon.css';
 
 export default {
     components: {
