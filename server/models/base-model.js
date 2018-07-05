@@ -6,11 +6,10 @@
 // import utiles from '../utiles';
 
 export default function (schema) {
-    // schema.methods.create_at_ago = function () {
-    //     return utiles.formatDate(this.createDate, true);
-    // };
-
-    // schema.methods.update_at_ago = function () {
-    //     return utiles.formatDate(this.updateDate, true);
-    // };
+    // 初始化新建时间和更新时间，通用
+    schema.methods.initDate = function () {
+        const date = new Date().getTime().toString();
+        this.createDate = date;
+        this.updateDate = date;
+    };
 }

@@ -22,9 +22,5 @@ export default {
         }
 
         return date.format('YYYY-MM-DD HH:mm');
-    },
-
-    formatCreateAndUpdateDate() {
-
     }
 };

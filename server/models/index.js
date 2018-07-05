@@ -6,7 +6,7 @@
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 
-import user from './user';
+import UserModel from './user';
 
 mongoose.Promise = bluebird;
 const db = 'mongodb://127.0.0.1:27017/test';
@@ -18,5 +18,5 @@ mongoose.connect(db).then(() => {
 });
 
 export default {
-    user
+    UserModel
 };

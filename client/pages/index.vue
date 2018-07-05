@@ -143,13 +143,19 @@ export default {
         addUser() {
             this.$refs.form.validate(valid => {
                 if (valid) {
-                    axios.post('/api/user', this.form).then(res => {
-
+                    axios.post('/api/users', this.form).then(res => {
+                        message({
+                            type: 'success',
+                            message: '添加成功'
+                        });
+                        this.tableData.push(res.data.data);
+                    }, res => {
+                        message({
+                            type: 'error',
+                            message: '添加失败 /(ㄒoㄒ)/~~'
+                        });
                     });
                     this.dialogVisible = false;
-                }
-                else {
-                    return false;
                 }
             });
         },

@@ -10,6 +10,9 @@ import upload from './api/upload';
 const router = new Router();
 
 router.get('/users', user.getUserList);
+router.delete('/users/:id', user.deleteUserItem);
+router.post('/users', user.addUserItem);
+
 router.post('/upload', upload);
 
 export default router;

@@ -4,6 +4,7 @@
  */
 
 import express from 'express';
+import bodyParser from 'body-parser';
 import {
     Nuxt,
     Builder
@@ -16,6 +17,7 @@ const app = express();
 const host = process.env.HOST || '127.0.0.1';
 const port = process.env.PORT || 9090;
 
+app.use(bodyParser.json());
 app.set('port', port);
 
 // Import API Routes
