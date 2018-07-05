@@ -14,17 +14,19 @@
             :data="tableData"
             style="width: 100%">
             <el-table-column
-                prop="name"
                 label="用户姓名"
+                prop="name"
                 width="180">
             </el-table-column>
             <el-table-column
+                label="创建时间"
                 prop="createDate"
-                label="创建时间">
+                :formatter="dateFormatter">
             </el-table-column>
             <el-table-column
+                label="更新时间"
                 prop="updateDate"
-                label="更新时间">
+                :formatter="dateFormatter">
             </el-table-column>
         </el-table>
         <!-- 添加资源的弹框 -->
@@ -72,6 +74,7 @@ import 'element-ui/lib/theme-chalk/form-item.css';
 import elInput from 'element-ui/lib/input';
 
 import axios from '@/plugins/axios';
+import utiles from '../utiles';
 
 export default {
     components: {
@@ -140,19 +143,28 @@ export default {
         addUser() {
             this.$refs.form.validate(valid => {
                 if (valid) {
-                    debugger
                     axios.post('/api/user', this.form).then(res => {
 
                     });
                     this.dialogVisible = false;
                 }
                 else {
-                    console.log('error submit!!');
                     return false;
                 }
             });
-            
+        },
 
+        /**
+         * 格式化一条资源数据的两个时间字段：createDate、updateDate
+         *
+         * @param {Object} row 一条资源数据
+         * @param {Object} column 单元格对象
+         * @param {Object} cellValue 字段值
+         *
+         * @return {string} 格式化后的时间
+         */
+        dateFormatter(row, column, cellValue) {
+            return utiles.formatDate(cellValue);
         }
     }
 };
