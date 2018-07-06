@@ -33,6 +33,8 @@ module.exports = {
         color: '#3B8070'
     },
     // Build configuration
-    build: {},
+    build: {
+        vendor: ['axios']
+    },
     srcDir: 'client/'
 };

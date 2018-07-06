@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section class="container user-list">
         <!-- 头部按钮行 -->
         <header class="button-line">
             <el-button
@@ -86,10 +86,10 @@ export default {
         elFormItem,
         elInput
     },
-    async asyncData({req}) {
+    async asyncData() {
         const res = await axios.get('/api/users');
         return {
-            tableData: res.data.data
+            tableData: res.data
         };
     },
     data() {
@@ -148,7 +148,7 @@ export default {
                             type: 'success',
                             message: '添加成功'
                         });
-                        this.tableData.push(res.data.data);
+                        this.tableData.push(res.data);
                     }, res => {
                         message({
                             type: 'error',
@@ -175,9 +175,15 @@ export default {
     }
 };
 </script>
-<style scoped>
-.button-line {
-    text-align: right;
-    padding: 5px 0;
+<style lang="less" scoped>
+.user-list {
+    .button-line {
+        text-align: right;
+        padding: 5px 0;
+    }
+    .el-form,
+    .dialog-footer {
+        padding-right: 17px;
+    }
 }
 </style>
