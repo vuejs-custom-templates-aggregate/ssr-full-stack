@@ -3,6 +3,9 @@
  * @author 小强赵
  */
 import axios from 'axios';
+import message from 'element-ui/lib/message';
+import 'element-ui/lib/theme-chalk/message.css';
+import 'element-ui/lib/theme-chalk/icon.css';
 
 let options = {};
 // The server-side needs a full url to works
@@ -20,18 +23,26 @@ $http.interceptors.response.use(res => {
         case 0:
             return data;
         case 1:
-            alert('错误提示');
+            message({
+                type: 'error',
+                message: data.statusInfo || '请求失败，请稍后重试 /(ㄒoㄒ)/~~'
+            });
+            return Promise.reject(data);
     }
 
 }, err => {
     switch (err.response.status) {
         case 404:
-            err.statusInfo = `请求地址出错: ${err.response.config.url}`;
+            err.statusInfo = '接口调用失败，请稍后重试';
             break;
         case 500:
             err.statusInfo = '服务器内部错误';
             break;
     }
+    message({
+        type: 'error',
+        message: err.statusInfo || '请求失败，请稍后重试 /(ㄒoㄒ)/~~'
+    });
     return Promise.reject(err);
 });
 
