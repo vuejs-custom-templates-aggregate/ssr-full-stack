@@ -22,5 +22,15 @@ export default {
         }
 
         return date.format('YYYY-MM-DD HH:mm');
+    },
+
+    /**
+     * 去除字符串前后空格
+     *
+     * @param {string} str 字符串
+     * @return {string} 处理后的字符串
+     */
+    trim(str) {
+        return str.replace(/^\s+|\s+$/g, '');
     }
 };

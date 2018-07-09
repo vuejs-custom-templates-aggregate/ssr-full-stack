@@ -74,7 +74,7 @@ import 'element-ui/lib/theme-chalk/form-item.css';
 import elInput from 'element-ui/lib/input';
 
 import axios from '@/plugins/axios';
-import utiles from '../utiles';
+import utiles from '@/../utiles';
 
 export default {
     components: {
