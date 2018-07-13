@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
-    "start": "cross-env NODE_ENV=production node build/main.js"
+    "start": "cross-env NODE_ENV=production node build/main.js",
+    "pm2": "cross-env NODE_ENV=production pm2 start build/main.js --name ssr-full-stack:9090"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -13,6 +14,8 @@
     "element-ui": "^2.4.1",
     "express": "^4.15.3",
     "formidable": "^1.2.1",
+    "fs-extra": "^6.0.1",
+    "get-ip": "^2.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "moment": "^2.22.2",

@@ -23,8 +23,8 @@ MongoDB 附注：
 ## 部署
 
 ```shell
-# 启动开发
-npm run dev
+# 构建
+npm run build
 # 启动服务和进程守护
 npm run pm2
 ```

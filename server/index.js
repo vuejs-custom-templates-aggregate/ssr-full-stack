@@ -5,6 +5,7 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
+import getIp from 'get-ip';
 import {
     Nuxt,
     Builder
@@ -14,7 +15,7 @@ import apiRouter from './api-router';
 import config from '../nuxt.config.js';
 
 const app = express();
-const host = process.env.HOST || '127.0.0.1';
+const host = getIp() || '127.0.0.1';
 const port = process.env.PORT || 9090;
 
 app.use(bodyParser.json());
