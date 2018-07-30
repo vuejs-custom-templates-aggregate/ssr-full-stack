@@ -29,10 +29,6 @@ npm run build
 npm run pm2
 ```
 
-## 使用方法
-
-待续...
-
 ## 架构
 
 router - 负责对外提供 API 的定义，整合下面的 api 和 middleware 层；
@@ -49,8 +45,99 @@ models - 数据实体的定义，和数据库的交互也在此定义。
 
 ## API
 
-> API 采用 RESTful 形式设计。
+**API 采用 RESTful 形式设计**
 
-实例：
+接口 API：
 
-- source: 一个人上传的一个站点的全部文件，不同人上传的同一站点算作两个资源；
+> URL: /api/users
+> 
+> Method: GET
+> 
+> 说明: 获取用户列表
+
+入参：无
+
+返回结果:
+
+```json
+{
+"status": 0,
+"statusInfo": "",
+"data": [{
+    "_id": "5b325144959843cf5420577b",
+    "name": "张三",
+    "createDate": "1530773195050",
+    "updateDate": "1530773195050"
+    }]
+}`
+```
+
+> URL: /api/users/:id
+> 
+> Method: DELETE
+> 
+>  说明: 删除某个用户
+
+入参：无
+
+返回结果:
+
+```json
+{
+    "status": 0,
+    "statusInfo": "",
+    "data": {
+        "n":1,
+        "ok":1
+    }
+}
+```
+
+> URL: /api/users
+> 
+> Method: POST
+> 
+>  说明: 添加个用户
+
+入参：
+
+```json
+{
+    name: "赵六"
+}
+```
+
+返回结果:
+
+```json
+{
+    "status": 0,
+    "statusInfo": "",
+    "data": {
+        "_id": "5b5e75113732983b990aafe9",
+        "name": "赵六",
+        "createDate": "1532917009489",
+        "updateDate": "1532917009489"
+    }
+}
+```
+
+> URL: /api/upload
+> 
+> Method: POST
+> 
+> 说明: 上传文件，通过表单的形式提交文件流
+> 
+> 演示地址: http://127.0.0.1:9090/upload
+
+入参: 文件表单
+
+返回结果:
+
+```json
+{
+    "status": 0,
+    "statusInfo": "上传成功",
+    "data": {}
+}
+```

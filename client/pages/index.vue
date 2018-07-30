@@ -28,6 +28,13 @@
                 prop="updateDate"
                 :formatter="dateFormatter">
             </el-table-column>
+            <el-table-column
+                label="操作"
+                width="100">
+                <template slot-scope="scope">
+                    <el-button @click="deleteUser(scope.row)" type="text" size="small">删除</el-button>
+                </template>
+            </el-table-column>
         </el-table>
         <!-- 添加资源的弹框 -->
         <el-dialog
@@ -121,7 +128,7 @@ export default {
                 confirmButtonText: '继续',
                 cancelButtonText: '取消',
                 type: 'warning'
-            }).then(() => axios.delete('/api/source/' + userItem._id)
+            }).then(() => axios.delete('/api/users/' + userItem._id)
             ).then(res => {
                 // 移除页面中的数据
                 this.tableData.some((item, index) => {

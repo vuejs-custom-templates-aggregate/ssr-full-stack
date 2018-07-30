@@ -3,7 +3,7 @@
  *
  * @author 小强赵
  */
-// import fs from 'fs';
+
 import {IncomingForm} from 'formidable';
 import path from 'path';
 

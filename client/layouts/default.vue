@@ -22,6 +22,7 @@ export default {
 <style>
 .container {
     margin: 0;
+    padding: 5px;
 }
 
 </style>
