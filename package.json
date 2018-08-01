@@ -18,6 +18,7 @@
     "get-ip": "^2.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "log4js": "^3.0.3",
     "moment": "^2.22.2",
     "mongoose": "^5.1.6",
     "nuxt": "latest",
