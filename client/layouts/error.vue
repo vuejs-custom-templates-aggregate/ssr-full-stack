@@ -15,7 +15,7 @@
 <script>
 /**
  * @file 错误页面布局
- * @author zxq
+ * @author 小强赵
  */
 export default {
     props: ['error']

@@ -8,7 +8,7 @@
 <script>
 /**
  * @file 默认页面布局
- * @author zxq
+ * @author 小强赵
  */
 import MyFooter from '../components/Footer.vue';
 

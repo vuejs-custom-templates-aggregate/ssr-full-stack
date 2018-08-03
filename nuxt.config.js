@@ -1,6 +1,6 @@
 /**
  * @file nuxt 配置文件
- * @author zxq
+ * @author 小强赵
  */
 
 module.exports = {
