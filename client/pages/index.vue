@@ -38,7 +38,7 @@
         </el-table>
         <!-- 添加资源的弹框 -->
         <el-dialog
-            title="添加资源"
+            title="添加用户"
             :visible.sync="dialogVisible"
             width="500px">
             <el-form ref="form" :model="form" :rules="formRules" label-width="95px">
